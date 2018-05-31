@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}Task Manager{% endblock %}</title>
+
+        {% include("Templates/Includes/stylesheets.html.twig") %}
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body class="wrapper">
+
+        {% block body %}{% endblock %}
+
+        {% include("Templates/Includes/javascripts.html.twig") %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
