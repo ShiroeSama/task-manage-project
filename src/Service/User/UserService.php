@@ -6,10 +6,11 @@
     use App\Entity\User\Role;
     use App\Form\Check\User\UserCheck;
     use App\Repository\User\UserRepository;
-    use App\Service\Utils\Exception\ExceptionHandlerService;
+    use App\Service\Exception\ExceptionHandlerService;
     use Doctrine\ORM\EntityManagerInterface;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+    use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
     /**
      * Class UserService

@@ -42,3 +42,11 @@ services:
     app.role_service:
         class: App\Service\User\RoleService
         arguments: ['@security.role_hierarchy']
+
+    # ----------------------------------------------------------------
+    # EventListener
+
+    App\EventListener\Doctrine\User\UserListener:
+        tags:
+            - { name: doctrine.orm.entity_listener, entity: App\Entity\User\User, event: prePersist}
+            - { name: doctrine.orm.entity_listener, entity: App\Entity\User\User, event: preUpdate}
